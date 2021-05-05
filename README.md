@@ -72,14 +72,23 @@ For `cv2.kmeans()`, please use `cv.KMEANS_PP_CENTERS` as the `flags` on the deve
 
 ## Use
 Split your train data and test data of classes, then put them under the folder 'dataset'.
+
     /dataset
+
     ├ /train
+
     │ ├ /paper
+
     │ ├ /rock
+
     │ └ /scissors
+
     └ /test
+
       ├ /paper
+
       ├ /rock
+
       └ /scissors
 
 
