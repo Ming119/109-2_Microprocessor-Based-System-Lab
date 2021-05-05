@@ -1,0 +1,20 @@
+['D:\\NTUT\\CSIE\\Year2-2\\283647_Multimedia Technologies and Applications\\Midterm\\期中專案_第12組_小組報告\\model.py', 'TEST']
++0.01s: Calculating Features Vector...
++6.03s: Calculating Features Vector Completed!
++6.03s: Validating classifier on test set
+Classifier f1-score on test set: 0.3924731182795699
+Confusion matrix:
+[[50 67  7]
+ [35 85  4]
+ [51 62 11]]
+Classification report:
+              precision    recall  f1-score   support
+
+       PAPER       0.37      0.40      0.38       124
+        ROCK       0.40      0.69      0.50       124
+    SCISSORS       0.50      0.09      0.15       124
+
+    accuracy                           0.39       372
+   macro avg       0.42      0.39      0.35       372
+weighted avg       0.42      0.39      0.35       372
+

@@ -1,0 +1,7 @@
+['D:\\NTUT\\CSIE\\Year2-2\\283647_Multimedia Technologies and Applications\\Midterm\\期中專案_第12組_小組報告\\model.py', 'TRAIN']
++0.0s: K-Means Clustering...
++92.87s: K-Means Clustering Completed!
++92.88s: Saved K-Means data at ./model/kmeans.npy.
++92.88s: Calculating Features Vector...
++131.81s: Calculating Features Vector Completed!
++131.89s: Training Finish.

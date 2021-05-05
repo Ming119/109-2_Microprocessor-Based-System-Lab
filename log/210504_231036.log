@@ -1,0 +1,71 @@
+['TRAIN', 'GRID']
+DEBUG Mode: False
+PLOT Mode: False
+
++0.0s: K-Means Clustering...
+	K-Means Clustering using `cv2.kmeans`
++62.98s: K-Means Clustering Completed!
++63.02s: Saved K-Means data at ./model/kmeans.npy.
++63.02s: Calculating Features Vector...
++102.4s: Calculating Features Vector Completed!
++102.4s: Defining grid search
++102.4s: Grid Searching...
++106.06s: Cross-validation results:
+	score	std		parameters
+	0.7821, 0.08995, {'C': 0.5, 'gamma': 'scale', 'kernel': 'linear'}
+	0.7929, 0.07832, {'C': 0.5, 'gamma': 'scale', 'kernel': 'poly'}
+	0.8163, 0.09683, {'C': 0.5, 'gamma': 'scale', 'kernel': 'rbf'}
+	0.7821, 0.08995, {'C': 0.5, 'gamma': 'auto', 'kernel': 'linear'}
+	0.7937, 0.0764, {'C': 0.5, 'gamma': 'auto', 'kernel': 'poly'}
+	0.8163, 0.09683, {'C': 0.5, 'gamma': 'auto', 'kernel': 'rbf'}
+	0.7825, 0.09134, {'C': 1.0, 'gamma': 'scale', 'kernel': 'linear'}
+	0.8048, 0.08066, {'C': 1.0, 'gamma': 'scale', 'kernel': 'poly'}
+	0.8183, 0.09538, {'C': 1.0, 'gamma': 'scale', 'kernel': 'rbf'}
+	0.7825, 0.09134, {'C': 1.0, 'gamma': 'auto', 'kernel': 'linear'}
+	0.804, 0.08134, {'C': 1.0, 'gamma': 'auto', 'kernel': 'poly'}
+	0.8179, 0.09609, {'C': 1.0, 'gamma': 'auto', 'kernel': 'rbf'}
+	0.7806, 0.09211, {'C': 2.0, 'gamma': 'scale', 'kernel': 'linear'}
+	0.8067, 0.08728, {'C': 2.0, 'gamma': 'scale', 'kernel': 'poly'}
+	0.8198, 0.09925, {'C': 2.0, 'gamma': 'scale', 'kernel': 'rbf'}
+	0.7806, 0.09211, {'C': 2.0, 'gamma': 'auto', 'kernel': 'linear'}
+	0.8063, 0.08884, {'C': 2.0, 'gamma': 'auto', 'kernel': 'poly'}
+	0.819, 0.1007, {'C': 2.0, 'gamma': 'auto', 'kernel': 'rbf'}
+	0.7806, 0.09205, {'C': 4.0, 'gamma': 'scale', 'kernel': 'linear'}
+	0.8032, 0.09042, {'C': 4.0, 'gamma': 'scale', 'kernel': 'poly'}
+	0.8135, 0.10229, {'C': 4.0, 'gamma': 'scale', 'kernel': 'rbf'}
+	0.7806, 0.09205, {'C': 4.0, 'gamma': 'auto', 'kernel': 'linear'}
+	0.8032, 0.09083, {'C': 4.0, 'gamma': 'auto', 'kernel': 'poly'}
+	0.8119, 0.10457, {'C': 4.0, 'gamma': 'auto', 'kernel': 'rbf'}
+	0.779, 0.09426, {'C': 8.0, 'gamma': 'scale', 'kernel': 'linear'}
+	0.796, 0.09054, {'C': 8.0, 'gamma': 'scale', 'kernel': 'poly'}
+	0.8143, 0.10523, {'C': 8.0, 'gamma': 'scale', 'kernel': 'rbf'}
+	0.779, 0.09426, {'C': 8.0, 'gamma': 'auto', 'kernel': 'linear'}
+	0.7956, 0.09061, {'C': 8.0, 'gamma': 'auto', 'kernel': 'poly'}
+	0.8147, 0.10541, {'C': 8.0, 'gamma': 'auto', 'kernel': 'rbf'}
+
+	Grid search best score: 0.8198412698412699
+	Grid search best parameters:
+		C: 2.0
+		gamma: scale
+		kernel: rbf
+
++106.06s: Validating classifier on train set
+Classifier f1-score on test set: 0.9952380952380953
+
+Confusion matrix:
+[[839   0   1]
+ [  2 834   4]
+ [  3   2 835]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+       PAPER       0.99      1.00      1.00       840
+        ROCK       1.00      0.99      1.00       840
+    SCISSORS       0.99      0.99      0.99       840
+
+    accuracy                           1.00      2520
+   macro avg       1.00      1.00      1.00      2520
+weighted avg       1.00      1.00      1.00      2520
+
++106.24s: Training Finish.

@@ -1,0 +1,25 @@
+['TEST']
+DEBUG Mode: False
+PLOT Mode: False
+
++0.03s: Calculating Features Vector...
++6.11s: Calculating Features Vector Completed!
++6.11s: Validating classifier on test set
+Classifier f1-score on test set: 0.7768817204301076
+
+Confusion matrix:
+[[ 87  29   8]
+ [  0 121   3]
+ [  6  37  81]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+       PAPER       0.94      0.70      0.80       124
+        ROCK       0.65      0.98      0.78       124
+    SCISSORS       0.88      0.65      0.75       124
+
+    accuracy                           0.78       372
+   macro avg       0.82      0.78      0.78       372
+weighted avg       0.82      0.78      0.78       372
+
