@@ -70,7 +70,7 @@ Therefore, do not use `scipy.cluster.vq.kmeans()` on the developing, use `sklear
 For `cv2.kmeans()`, please use `cv.KMEANS_PP_CENTERS` as the `flags` on the developing.
 
 
-## Use
+## How to Use
 Split your train data and test data of classes, then put them under the folder 'dataset'.
 
 >    /dataset \
@@ -79,25 +79,36 @@ Split your train data and test data of classes, then put them under the folder '
 >    │ ├ /rock \
 >    │ └ /scissors \
 >    └ /test \
->      ├ /paper \
->      ├ /rock \
->      └ /scissors \
+>   * ├ /paper \
+>   * ├ /rock \
+>   * └ /scissors
 
 #### Train model
-Use the following command to train the model.
+Run the following command to train the model.
 
     model.py TRAIN
 
-If you want to find out the best parameters automatically, use the following command.
+If you want to find out the best parameters automatically, run the following command.
 
     model.py TRAIN GRID
 
 #### Test model
-Use the following command to test the model.
+Run the following command to test the model.
 
     model.py TEST
 
 All of the command above will generate LOG file under the folder `log`.
+
+#### Play
+To play the Rock-Paper-Scissors game, run the following command.
+
+    midterm.py <image path>
+
+If you want to check out the failure cases, run the following command.
+
+    midterm.py
+
+It will show all the failure cases one by one, and save them under `doc/error output`.
 
 
 ## Reference
