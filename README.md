@@ -73,32 +73,37 @@ For `cv2.kmeans()`, please use `cv.KMEANS_PP_CENTERS` as the `flags` on the deve
 ## Use
 Split your train data and test data of classes, then put them under the folder 'dataset'.
 
-    /dataset
+>    /dataset
+>    ├ /train
+>    │ ├ /paper
+>    │ ├ /rock
+>    │ └ /scissors
+>    └ /test
+>      ├ /paper
+>      ├ /rock
+>      └ /scissors
 
-    ├ /train
+#### Train model
+Use the following command to train the model.
+    model.py TRAIN
 
-    │ ├ /paper
+If you want to find out the best parameters automatically, use the following command.
+    model.py TRAIN GRID
 
-    │ ├ /rock
+#### Test model
+Use the following command to test the model.
+    model.py TEST
 
-    │ └ /scissors
-
-    └ /test
-
-      ├ /paper
-
-      ├ /rock
-
-      └ /scissors
-
-
+All of the command above will generate LOG file under the folder `log`.
 
 
 ## Reference
-[Rock Paper Scissors Dataset](http://www.laurencemoroney.com/rock-paper-scissors-dataset/) (CC By 2.0 @Laurence Moroney lmoroney@gmail.com / laurencemoroney.com)
+[Rock Paper Scissors Dataset](http://www.laurencemoroney.com/rock-paper-scissors-dataset/) (CC By 2.0 @Laurence Moroney lmoroney@gmail.com / [laurencemoroney.com](http://www.laurencemoroney.com/))
+
 [DrGFreeman/rps-cv](https://github.com/DrGFreeman/rps-cv) ([MIT LICENSE](https://github.com/DrGFreeman/rps-cv/blob/master/LICENSE))
 
 [使用OpenCV与sklearn实现基于词袋模型(Bag of Word)的图像分类预测与搜索](https://cloud.tencent.com/developer/article/1165870)
+
 [SVM+Sift+K-means实现图像分类（python）](https://blog.csdn.net/weixin_42486554/article/details/103732613)
 
 
