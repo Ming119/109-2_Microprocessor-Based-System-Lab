@@ -39,41 +39,41 @@
 #### SIFT Algorithm
 
 We use `cv2.SIFT_create()` instead of `cv2.features2d.SIFT_create()`.
-
-`cv2.SIFT_create()`
-
-'''' python
+```python
 def _SIFT_(img):
     sift = cv2.SIFT_create();
     kp, des = sift.detectAndCompute(img, None);
 
     return des;
-''''
+```
 
 
 #### K-Means Clustering Algorithm
 There are 3 K-Means Algorithm, `cv2.kmeans()`, `sklearn.cluster.KMeans()`, `scipy.cluster.vq.kmeans()`, respectively.
 
 `cv2.kmeans()`
-
+```python
     criteria = cv2.kmeans(cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 20, 0.1);
     flags = cv2.KMEANS_RANDOM_CENTERS;
 
     compactness, labels, centers = cv2.kmeans(features, util.K_MEANS_CLUSTERS, None, criteria, 20, flags);
 
     return centers;
+```
 
 `sklearn.cluster.KMeans()`
-
+```python
     kmeans = KMeans(n_clusters=util.K_MEANS_CLUSTERS, random_state=0).fit(features);
 
     return kmeans.cluster_centers_;
+```
 
 `scipy.cluster.vq.kmeans()`
-
+```python
     centers, variance = kmeans(features, util.K_MEANS_CLUSTERS);
 
     return centers;
+```
 
 The accuracy of `scipy.cluster.vq.kmeans()` is the best, but the algorithm does not accept `random_state` as a parameter.
 The output will be different every time.
@@ -84,10 +84,10 @@ For `cv2.kmeans()`, please use `cv.KMEANS_PP_CENTERS` as the `flags` on the deve
 
 #### Standardization
 For the features standardization, we use 'sklearn.preprocessing.StandardScaler()'.
-
+```python
     stdSlr = StandardScaler().fit(data);
     data = stdSlr.transform(data);
-
+```
 
 
 ## How to Use
