@@ -37,8 +37,7 @@
 
 
 #### SIFT Algorithm
-We use `cv2.SIFT_create()` instead of `cv2.features2d.SIFT_create()`.
-`cv2.SIFT_create()`
+We use `cv2.SIFT_create()` instead of `cv2.features2d.SIFT_create()`.  
 
     def _SIFT_(img):
         sift = cv2.SIFT_create();
