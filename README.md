@@ -39,13 +39,13 @@
 #### SIFT Algorithm
 We use `cv2.SIFT_create()` instead of `cv2.features2d.SIFT_create()`.
 `cv2.SIFT_create()`
+'''' python
+def _SIFT_(img):
+    sift = cv2.SIFT_create();
+    kp, des = sift.detectAndCompute(img, None);
 
-    def _SIFT_(img):
-        sift = cv2.SIFT_create();
-        kp, des = sift.detectAndCompute(img, None);
-
-        return des;
-
+    return des;
+''''
 
 
 #### K-Means Clustering Algorithm
